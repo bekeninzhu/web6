@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#132e2a">
+  <title>The Last Slice — A Birthday Mystery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="topbar">
+      <a class="brand" href="index.html"><span class="brand-mark">◒</span> THE LAST SLICE<span class="brand-dot">.</span></a>
+      <span class="edition">AN AITU BIRTHDAY MYSTERY <span>№ 006 / jQuery</span></span>
+    </header>
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow"><span class="status-dot"></span> A PARTY. A MISSING CAKE. A LITTLE DETECTIVE WORK.</p>
+        <h1>Someone had<br>the <em>last slice.</em><span class="title-star">✳</span></h1>
+        <p class="intro">Twenty-one guests. Four rooms. One delicious mystery.<br>Follow the clues and find out who took the cake.</p>
+      </div>
+      <div class="evidence">
+        <div class="evidence-top"><span>EVIDENCE / 01</span><span>21:30</span></div>
+        <svg class="cake-art" viewBox="0 0 250 180" role="img" aria-label="A slice of strawberry birthday cake">
+          <ellipse cx="124" cy="155" rx="97" ry="15" fill="#bcceb5"/>
+          <path d="M47 87L151 38l59 61-104 48z" fill="#efb39d" stroke="#193b32" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M47 87v44l59 32v-45z" fill="#f6dbb6" stroke="#193b32" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M106 118l104-49v62l-104 32z" fill="#f4d6b5" stroke="#193b32" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M47 111l59 30 104-43" fill="none" stroke="#cc685b" stroke-width="10"/>
+          <path d="M47 87l104-49 59 31-104 49z" fill="#fff5dd" stroke="#193b32" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M47 87v13q9 12 14 2v-2q7 12 14 3v12q6 12 13 0v-2q10 13 18 5V118z" fill="#fff5dd" stroke="#193b32" stroke-width="2"/>
+          <path d="M129 67c-18-19 4-35 18-19 17-17 34 2 19 18l-19 16z" fill="#e46f60" stroke="#193b32" stroke-width="3"/>
+          <path d="M145 48l-6-13 12 6 9-9-1 14" fill="#476d47" stroke="#193b32" stroke-width="2"/>
+          <path d="M70 44l6 3m-2-13v5m115 102l7 2m-20 11l5 2M37 143l5-2" stroke="#193b32" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <div class="evidence-note"><span>Last seen in the kitchen.</span><span class="stamp">MISSING</span></div>
+      </div>
+    </section>
+
+    <main class="workspace">
+      <section class="board-area" aria-label="The party house">
+        <div class="section-heading"><div><span class="eyebrow">THE SCENE</span><h2>A house full of suspects<span>.</span></h2></div><span class="party-time">19:30 — 22:30</span></div>
+        <section class="log" aria-live="polite"><div class="log-heading"><span class="status-dot"></span><span>INVESTIGATION LOG</span><span class="case-status">READY WHEN YOU ARE</span></div><p id="result">Open a case file to start the investigation.</p><pre id="query"></pre></section>
+        <section class="house">
+          <div class="floor-heading"><span class="floor-label">02 <b>UPSTAIRS</b></span><span>Balcony & Hall</span></div>
+          <div id="upstairs" class="rooms"></div>
+          <div class="floor-heading"><span class="floor-label">01 <b>DOWNSTAIRS</b></span><span>Kitchen & Living room</span></div>
+          <div id="downstairs" class="rooms"></div>
+        </section>
+        <div class="legend"><span class="legend-title">THE LITTLE DETAILS</span><span>📱 Phone</span><span>👓 Glasses</span><span>👜 Bag</span><span>☕ Cup</span><span>🍰 Crumbs</span><span><i>A</i> AITU</span></div>
+        <div class="board-hint"><span>↗</span><p><strong>Get to know the guests.</strong> Click a portrait for the full story. Move guests between rooms, or sort them by arrival time.</p></div>
+      </section>
+      <aside class="case-panel" aria-label="Investigation cases">
+        <div class="case-panel-head"><span class="eyebrow">FOLLOW YOUR CURIOSITY</span><h2>The case files<span>20</span></h2><p>Pick a lead. Watch the house respond.</p></div>
+        <div class="case-actions"><button id="clearBtn">↺ Clear spotlight</button><button id="resetBtn" title="Restore the original party">Reset party</button></div>
+        <select id="mobileCases" aria-label="Choose an investigation case"><option value="">Choose a case to investigate…</option></select>
+        <div id="caseButtons" class="case-buttons"></div>
+        <p class="case-foot">A clue is only a click away. <span>✳</span></p>
+      </aside>
+    </main>
+    <footer><span>THE LAST SLICE <b>©</b> A PARTY WORTH INVESTIGATING</span><span>Selectors, stories & a little jQuery magic.</span></footer>
+  </div>
+  <div id="modalBackdrop" class="backdrop"><div id="guestModal" class="modal" role="dialog" aria-modal="true" aria-label="Guest details"></div></div>
+  <script src="jquery.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
